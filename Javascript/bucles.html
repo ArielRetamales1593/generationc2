@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script> 
+// FOR-------------------------------------------------------------------
+// var variable global
+// let variable local 
+// const  bloques especificos o datos permanentes que no cambien, 
+//  bucle For 
+// i 
+// VARIABLE DE INICIO
+// CONDICION 
+// INCREMENTAR O DISMINUIR
+// TODO DE NUEVO HASTA Q SE CUMPLA LA CONDICION 
+
+// for(let i=0; i<10; i++ ){
+//     console.log("el valor de i es", i )
+
+
+
+// }
+// EJ
+// USO RECORRER ARREGLOS
+
+// for(let i=0; i<10; i++ ){
+//     console.log("el valor de i es", i )
+
+
+// numpar.length-1=ultima posicion 
+// }
+
+// dentro del for no se usa var , no es recomendable 
+//  a menos que se defina afuera 
+
+var numpar=[2,4,6,8,10];
+console.log("el arreglo es ", numpar)
+for (let i = 0; i < numpar.length; i++) {
+    let num = numpar [i];
+    console.log("la posicion es " , i)
+    console.log(" el elemento es", num)
+    console.log(" ")
+}
+
+
+
+
+
+var suma_pares=0;
+        for(let i=0; i< numpar.length;i++){
+            suma_pares = suma_pares + numpar[i];
+        }
+
+
+console.log(" suma total" ,suma_pares)
+
+
+
+
+
+
+</script>
+
+
+
+    
+</body>
+</html>
