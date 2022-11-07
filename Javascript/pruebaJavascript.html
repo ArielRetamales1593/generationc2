@@ -19,35 +19,45 @@
         // valores de los productos a comprar, esta debe retornar el total final de la compra según
         // corresponda o no descuento.
 
-        var dia = prompt("ingrese el dia de la semana")
-        var productos = [200, 300]
+        // var dia = prompt("ingrese el dia de la semana")
+        // var productos = [100, 400]
+
+
+        // veinteDescuento()
+        // suma=0
+
+
+        // function veinteDescuento(semana, valor) {
+        //     if (dia === "martes" || dia === "jueves") {
+
+
+        //         for (let i = 0; i < productos.length; i++) {
+        //             suma = suma + productos[i]
+        //             const valorDescuento =  suma -(suma * 0.2)
+        //             retuz
 
 
 
-        veinteDescuento()
+
+        //         }
+
+        //         console.log("tu producto con el 20% de descuesto es ", Total)
 
 
-        function veinteDescuento(dia, valor) {
-            if (dia === "martes" || dia === "jueves") {
+        //     } else {
+        //         for (let i = 0; i < productos.length; i++) {
+        //             const valorDescuento = productos[i]
+        //             suma = suma + productos[i]
 
-                for (let i = 0; i < productos.length; i++) {
-                    const valorDescuento = productos[i] * 0.20
-
-                    console.log("tu producto con el 20% de descuesto es ", valorDescuento)
-                }
+        //         }
 
 
+        //         console.log("tu total sin descuento es ", suma)
 
-            } else {
-                for (let i = 0; i < productos.length; i++) {
-                    const valorDescuento = productos[i]
+        //     }
 
-                    console.log("tu producto sin el descuento es de  ", valorDescuento)
-                }
 
-            }
-
-        }
+        // }
 
 
 
@@ -64,35 +74,33 @@
         // valores de los productos a comprar no existan valores negativos ingresados por error,
         // en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar
         // un mensaje de error junto con el número negativo y el índice en el que se encontraba.
-          var producto2=[2,3,5,-1]
+        var producto2 = [2, 3, 5, -1,-3,-546]
 
-function verificar (){
+        function verificar() {
 
 
-    for (let i = 0; i < producto2.length; i++) {
-        const element = producto2 [i];
+            for (let i = 0; i < producto2.length; i++) {
+                const numero = producto2[i];
 
-        if( producto2[i]>0){
-            console.log("correcto")
+                if (producto2[i] > 0) {
+                    console.log("correcto")
+
+                } else {
+                    console.log("ingreso incorrecto " + " posicion" + i + "numero  "+ numero)
+
+
+                }
+
+            }
+
+
 
         }
-        
-else{
-    console.log("ingreso incorrecto"+ "posicion"+ i + "numero" + producto2[i] + " incorrecto "  )
-
-
-}
-
-    }
-
-
-
-}
 
         verificar()
 
 
-    
+
 
         // Dado el siguiente arreglo [200,5500,900,7000,500,300] con los valores de cada
         // producto
@@ -100,6 +108,11 @@ else{
         // ○ Crea una función que retorne el valor del producto menos costoso.
 
         var arregloNum = [200, 5500, 900, 7000, 500, 300]
+
+        numMax=0
+        numMin=0
+
+
 
         function numMax(arreglo) {
 
