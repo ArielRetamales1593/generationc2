@@ -21,3 +21,69 @@ ALTER TABLE generationc2.profesores MODIFY COLUMN id INT primary key auto_increm
 describe profesores ;
 
 select * from administrativos ;
+
+
+CREATE TABLE generationc2.cursos (
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nombre varchar(100) NOT NULL,
+	cantidadAlumnos int NOT null,
+	especialidad varchar (100)
+);
+
+INSERT INTO generationc2.cursos (nombre,cantidadAlumnos,especialidad)
+	VALUES ('cohorte1',34,'java');
+	INSERT INTO generationc2.cursos (nombre,cantidadAlumnos,especialidad)
+	VALUES ('cohorte2',35,'javaScript');
+INSERT INTO generationc2.cursos (nombre,cantidadAlumnos,especialidad)
+	VALUES ('cohorte3',35,'mysql');
+select * from cursos;
+
+-- agregar fk a estudiantes forein key
+-- creacion columnas 
+
+
+alter table estudiante
+add cursoId int ;
+
+-- relacion de las tablas -- 
+
+alter table estudiante
+add foreign key (cursoId) references cursos(id) ;
+
+INSERT INTO generationc2.estudiante  (nombre,apellido,cursoId)
+	VALUES ('jhon',"doe",1),
+	("juan", "farias", 2),
+	("daniel", "molina",3);
+
+
+
+insert into generationc2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
