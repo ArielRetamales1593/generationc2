@@ -4,7 +4,7 @@ create table tipo(
 id int primary key auto_increment not null,
 tipo varchar(100) not null,
 origen varchar (100));
- -- agregat valor a tipo 
+ -- agregar 4  tipos de producto 
 INSERT INTO tipo (tipo,origen)
 	VALUES ('verduras o frutas', "alimentos"),
 			('congelados','alimentos'),
@@ -14,14 +14,14 @@ INSERT INTO tipo (tipo,origen)
 INSERT INTO tipo (tipo,origen)
 	VALUES ('bebidas', "alimentos");
 			
-
+-- crear tabla proveedores
 create table proveedores(
 id int primary key auto_increment not null,
 nombre varchar (100) not null,
 contacto_id int  not null,
 foreign key (contacto_id) references contacto(id));
 ;
-
+-- agregar proveedores
 INSERT INTO proveedores (nombre,contacto_id)
 	VALUES ('juan molina',2);
 
@@ -31,7 +31,7 @@ INSERT INTO proveedores (nombre,contacto_id)
 	VALUES ('jesus ramirez',4);
 
 
-
+-- crear tabla productos
 create table producto(
 id int primary key auto_increment not null,
 nombre varchar (100) not null,
@@ -47,7 +47,7 @@ foreign key (valor_id) references valor(id)
 
 );
 
-
+-- agregar productos
 INSERT INTO producto (nombre,descripcion,precio,tipo_id,prov_id,valor_id)
 	VALUES ('manzana','roja',250,6,34,1);
 			
@@ -71,18 +71,14 @@ INSERT INTO producto (nombre,descripcion,precio,tipo_id,prov_id,valor_id)
 
 INSERT INTO producto (nombre,descripcion,precio,tipo_id,prov_id,valor_id)
 	VALUES ('coca-cola','3 lt',2500,12,34,2);
-
+ -- crear tabla contacto
 create table contacto(
 id int primary key auto_increment not null,
 nombre varchar (100) not null,
 email varchar (100) not null,
 telefono bigint not null);
 
-
-INSERT INTO contacto(tipo,origen)
-	VALUES ('verduras o frutas', "alimentos"),
-			('congelados','alimentos'),
-			('articulos aseo', 'higiene personal') ;
+-- agregar contacto
 
 
 INSERT INTO contacto(nombre,email,telefono)
@@ -90,13 +86,14 @@ INSERT INTO contacto(nombre,email,telefono)
 	 ('daniel riquelme','daniri@gmail.com',9876573),
 	 ('josefa manriquez','jomanri@gmail.com',887766554);
 
-
+-- crear tabla valor
 
 create table valor(
 id int primary key auto_increment not null,
 cantidad int not null  
 );
 
+-- ingresar valores a cantidad
 
 INSERT INTO valor (cantidad)
 	VALUES (1);
